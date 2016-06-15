@@ -1,0 +1,27 @@
+html
+	head
+		title=title
+		link(href='/css/main.css',rel='stylesheet')
+		link(href='/bootstrap-3.3.6-dist/css/bootstrap.min.css',rel='stylesheet')
+	body#mainApp
+		div(class='header')
+			div(class='container')
+				nav(class='navbar navbar-default')
+					div(class="container-fluid")
+						ul(class='navbar-nav')
+							li(class='active')
+								div
+									a(ui-sref='home') Home
+				div(ui-view='')
+		
+
+		script(type='text/javascript', src='/lib/angular/angular.min.js')
+		script(type='text/javascript', src='/lib/angular-ui-router/release/angular-ui-router.min.js')
+
+		script(type='text/javascript', src='/modules/core/core.client.module.js')
+		script(type='text/javascript', src='/modules/core/config/core.client.routes.js')
+
+		script(type='text/javascript', src='/modules/topupmobile/topupmobile.client.module.js')
+		script(type='text/javascript', src='/modules/topupmobile/config/topupmobile.client.routes.js')
+
+		script(type='text/javascript', src='/application.js')

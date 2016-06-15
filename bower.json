@@ -1,0 +1,21 @@
+{
+  "name": "miniproAngular",
+  "authors": [
+    "mikenaclub <siyamike@hotmail.com>"
+  ],
+  "description": "sample project",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.7",
+    "angular-ui-router": "~0.2.15"
+  }
+}

@@ -1,0 +1,22 @@
+angular.module('topupmobile').config([
+	'$stateProvider',
+	function($stateProvider){
+		$stateProvider
+			.state('home',{
+				url:'',
+				templateUrl:'/modules/topupmobile/views/home.client.view.jade'
+			})
+			.state('ais',{
+				url:'/ais',
+				templateUrl:'/modules/topupmobile/views/ais.client.view.jade'
+			})
+			.state('dtac',{
+				url:'/dtac',
+				templateUrl:'/modules/topupmobile/views/dtac.client.view.jade'
+			})
+			.state('true',{
+				url:'/true',
+				templateUrl:'/modules/topupmobile/views/true.client.view.jade'
+			});
+	}
+]);
