@@ -1,9 +1,27 @@
-h2(align='center') Ais
-form(name='telinfo')
-	div
-		label(for='telnumber') Tel Numbers : 
-		input(name='telnumber',type='Numbers',placeholder='telnumber')
-	div
-		label(for='amount') Amount : 
-		input(name='amount',type='amount',placeholder='amount')
-
+h2(align='center' class='jumbotron') Ais
+form(name='telinfo',action='/#!/selectpayment',ng-controller='getValueAis',novalidate)
+	div(align='center')
+		<br><br>
+		label(for='telnumber') Tel Numbers &nbsp;&nbsp;
+		input(name='telnumber',type='number',placeholder='telnumber',minlength="10", maxlength="10",ng-model='topupmobile.telnumber', required)
+		p(ng-show='telinfo.telnumber.$touched && telinfo.telnumber.$error.required') Please use telnumber
+		p(ng-show='telinfo.telnumber.$error.minlength || telinfo.telnumber.$error.maxlength') Please use 10 numbers		
+		p(ng-show='telinfo.telnumber.$touched && telinfo.telnumber.$error.number') Please use number only	
+	div(align='center')
+		label(for='amount') Amount  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		input(name='amount',type='radio',value='50',ng-model='topupmobile.amount',required)
+		label &nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;
+		input(name='amount',type='radio',value='100',ng-model='topupmobile.amount',required)
+		label &nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;
+	div(align='center')
+		label(for='amount')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		input(name='amount',type='radio',value='300',ng-model='topupmobile.amount',required)
+		label &nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;
+		input(name='amount',type='radio',value='500',ng-model='topupmobile.amount',required)
+		label &nbsp;&nbsp;&nbsp;500&nbsp;&nbsp;&nbsp;
+	div(ng-repeat='Ais in aisinfo')
+		label(for='amount') {{Ais.price}}
+	div(ng-repeat='Test in testinfo')
+		label(for='amount') {{Test.Name}}	
+	div(align='center')
+		input(name='submit' type='submit',ng-disabled="telinfo.telnumber.$invalid || telinfo.amount.$invalid",value='submit')

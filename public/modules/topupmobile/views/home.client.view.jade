@@ -1,11 +1,11 @@
-h2(align='center') Select System
+h2(align='center' class='jumbotron') Select System
 form( name='systemForm')
 	div(align='center')
-		a(ui-sref='ais')
+		a(href='#', ng-controller='checkServer' , ng-click='checkais()')
 			img(align='left' src='/img/ballball.png' width='150' height='150')
-		a(ui-sref='dtac')
+		a(href='#', ng-controller='checkServer' , ng-click='checkdtac()')
 			img(src='/img/ballball.png' width='150' height='150')
-		a(ui-sref='true')
+		a(href='#', ng-controller='checkServer' , ng-click='checktrue()')
 			img(align='right' src='/img/ballball.png' width='150' height='150')
 	div(align='center')
 		img(align='left' src='/img/bucketAIS.png' width='150' height='150')

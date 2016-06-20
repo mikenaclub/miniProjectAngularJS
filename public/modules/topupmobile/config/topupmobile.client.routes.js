@@ -6,6 +6,10 @@ angular.module('topupmobile').config([
 				url:'',
 				templateUrl:'/modules/topupmobile/views/home.client.view.jade'
 			})
+			.state('home1',{
+				url:'/',
+				templateUrl:'/modules/topupmobile/views/home.client.view.jade'
+			})
 			.state('ais',{
 				url:'/ais',
 				templateUrl:'/modules/topupmobile/views/ais.client.view.jade'
@@ -17,6 +21,10 @@ angular.module('topupmobile').config([
 			.state('true',{
 				url:'/true',
 				templateUrl:'/modules/topupmobile/views/true.client.view.jade'
+			})
+			.state('selectpayment',{
+				url:'/selectpayment',
+				templateUrl:'/modules/topupmobile/views/selectpayment.client.view.jade'
 			});
 	}
 ]);

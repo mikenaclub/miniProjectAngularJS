@@ -4,15 +4,13 @@ html
 		link(href='/css/main.css',rel='stylesheet')
 		link(href='/bootstrap-3.3.6-dist/css/bootstrap.min.css',rel='stylesheet')
 	body#mainApp
-		div(class='header')
-			div(class='container')
-				nav(class='navbar navbar-default')
-					div(class="container-fluid")
-						ul(class='navbar-nav')
-							li(class='active')
-								div
-									a(ui-sref='home') Home
-				div(ui-view='')
+		div(class='container')
+			nav(class='navbar navbar-default')
+				div(class='container-fluid')
+					ul(class='nav navbar-nav')
+						li(class='active')
+							a(href='/#!') Home
+			div(ui-view='')
 		
 
 		script(type='text/javascript', src='/lib/angular/angular.min.js')
@@ -20,8 +18,15 @@ html
 
 		script(type='text/javascript', src='/modules/core/core.client.module.js')
 		script(type='text/javascript', src='/modules/core/config/core.client.routes.js')
-
 		script(type='text/javascript', src='/modules/topupmobile/topupmobile.client.module.js')
 		script(type='text/javascript', src='/modules/topupmobile/config/topupmobile.client.routes.js')
+		
+		<!-- controller -->
+		script(type='text/javascript', src='/modules/topupmobile/controllers/getValueAis.client.controllers.js')
+		script(type='text/javascript', src='/modules/topupmobile/controllers/checkServer.client.controllers.js')
+			
+		<!-- service -->
+		script(type='text/javascript', src='/modules/topupmobile/services/aisinfo.client.service.js')
+		script(type='text/javascript', src='/modules/topupmobile/services/test.client.service.js')
 
 		script(type='text/javascript', src='/application.js')
